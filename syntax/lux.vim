@@ -15,7 +15,7 @@ syn match luxFrac "\<\.[0-9_]\+\>"
 syn match luxChar /#"\([a-zA-Z0-9]\|\\u[0-9a-fA-F]\{4}\|\\[a-z]\)"/
 syn region luxText start=/"/ skip=/\\"/ end=/"/ contains=@Spell
 
-syn match luxType "\<[A-Z][a-zA-Z0-9_']*\>"
+syn match luxType "\<[A-Z][a-zA-Z0-9_'><]*\>"
 
 syn keyword luxTodo contained TODO FIXME XXX NOTE
 syn match luxLineComment "##.*$" contains=luxTodo
