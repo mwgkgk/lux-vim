@@ -20,6 +20,7 @@ syn match luxType "\<[A-Z][a-zA-Z0-9_'><]*\>"
 
 syn keyword luxTodo contained TODO FIXME XXX NOTE
 syn match luxLineComment "##.*$" contains=luxTodo
+syn region luxBlockComment start="#(" end=")#" contains=luxBlockComment,luxTodo,@Spell
 
 " Keywords taken from original lux-mode.el:
 syn keyword luxKeyword ;module:
@@ -69,6 +70,7 @@ highlight def link luxVariant Identifier
 highlight def link luxType Type
 
 highlight def link luxLineComment Comment
+highlight def link luxBlockComment Comment
 highlight def link luxTodo Todo
 
 highlight def link luxKeyword Keyword
