@@ -49,13 +49,13 @@ syn keyword luxKeyword object jvm-import do-to with-open synchronized class-for
 syn keyword luxKeyword doc
 syn keyword luxKeyword regex
 
-" More keywords:
-syn keyword luxKeyword log!
-
 " Keywords starting with | don't play nice despite being a part of iskeyword:
 syn match luxKeyword "\<|\>"
 syn match luxKeyword "\<|>\>"
 syn match luxKeyword "\<|>\.\>"
+
+" More keywords:
+syn keyword luxKeyword log! lambda
 
 highlight def link luxBoolean Boolean
 highlight def link luxInt Number
