@@ -20,6 +20,7 @@ syn match luxType "\<[A-Z][a-zA-Z0-9_']*\>"
 syn keyword luxTodo contained TODO FIXME XXX NOTE
 syn match luxLineComment "##.*$" contains=luxTodo
 
+" Keywords taken from original lux-mode.el:
 syn keyword luxKeyword ;module:
 syn keyword luxKeyword def: type: macro: syntax: program:
 syn keyword luxKeyword sig: struct: context: template:
@@ -34,9 +35,8 @@ syn keyword luxKeyword function case : :! :!! undefined ident-for
 syn keyword luxKeyword and or
 syn keyword luxKeyword char
 syn keyword luxKeyword exec let with-expansions if cond do be open loop recur comment list list& io vector tree
-" syn keyword luxKeyword get@ set@ update@ |> |>. <| <|. _$ $_ ~ ~@ ~' :: ::: default
+syn keyword luxKeyword get@ set@ update@ <| <|. _$ $_ ~ ~@ ~' :: ::: default
 syn keyword luxKeyword & -> All Ex Rec host $ type
-" syn keyword luxKeyword | & -> All Ex Rec host $ type
 syn keyword luxKeyword ^ ^or ^slots ^multi ^~ ^@ ^template ^open ^|> ^stream& ^regex
 syn keyword luxKeyword bin oct hex
 syn keyword luxKeyword pre post
@@ -48,7 +48,13 @@ syn keyword luxKeyword object jvm-import do-to with-open synchronized class-for
 syn keyword luxKeyword doc
 syn keyword luxKeyword regex
 
+" More keywords:
 syn keyword luxKeyword log!
+
+" Keywords starting with | don't play nice despite being a part of iskeyword:
+syn match luxKeyword "\<|\>"
+syn match luxKeyword "\<|>\>"
+syn match luxKeyword "\<|>\.\>"
 
 highlight def link luxBoolean Boolean
 highlight def link luxInt Number
