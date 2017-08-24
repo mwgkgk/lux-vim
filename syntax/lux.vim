@@ -64,11 +64,11 @@ highlight def link luxFrac Float
 highlight def link luxChar Character
 highlight def link luxText String
 
-highlight def link luxType Include
+highlight def link luxType Type
 
 highlight def link luxLineComment Comment
 highlight def link luxTodo Todo
 
-highlight def link luxKeyword Statement
+highlight def link luxKeyword Keyword
 
 let b:current_syntax = "lux"
