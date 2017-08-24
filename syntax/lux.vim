@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:     Lux
 " Maintainer:   mwgkgkgkgkgkgkgkgkgk...
-" URL:          http://github.com/mwgkgk/vim-lux.git
+" URL:          http://github.com/mwgkgk/lux-vim.git
 
 if exists("b:current_syntax")
   finish
