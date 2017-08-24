@@ -8,5 +8,3 @@ setlocal lisp
 setlocal commentstring=##%s
 
 setlocal iskeyword+=43,?,:,!,$,~,.,',;,35,>,<,@-@,124,`,&,^
-
-" #
