@@ -12,7 +12,7 @@ syn match luxInt "\<-\=[0-9_]\+\>"
 syn match luxNat "\<+[0-9_]\+\>"
 syn match luxReal "\<-\=[0-9_]\+\.[0-9_]\+\>"
 syn match luxFrac "\<\.[0-9_]\+\>"
-syn match luxChar /#"\([a-zA-Z0-9]\|\\u[0-9a-fA-F]\{4}\|\\[a-z]\)"/
+syn match luxChar /\k\@<!#"\([a-zA-Z0-9]\|\\u[0-9a-fA-F]\{4}\|\\[a-z]\)"\k\@!/
 syn region luxText start=/"/ skip=/\\"/ end=/"/ contains=@Spell
 
 syn match luxType "\<[A-Z][a-zA-Z0-9_'><]*\>"
