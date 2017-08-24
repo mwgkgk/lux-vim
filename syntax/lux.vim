@@ -14,6 +14,7 @@ syn match luxReal "\<-\=[0-9_]\+\.[0-9_]\+\>"
 syn match luxFrac "\<\.[0-9_]\+\>"
 syn match luxChar /\k\@<!#"\([a-zA-Z0-9]\|\\u[0-9a-fA-F]\{4}\|\\[a-z]\)"\k\@!/
 syn region luxText start=/"/ skip=/\\"/ end=/"/ contains=@Spell
+syn match luxVariant "\k\@<!#\k\+\k\@!"
 
 syn match luxType "\<[A-Z][a-zA-Z0-9_'><]*\>"
 
@@ -63,6 +64,7 @@ highlight def link luxReal Float
 highlight def link luxFrac Float
 highlight def link luxChar Character
 highlight def link luxText String
+highlight def link luxVariant Identifier
 
 highlight def link luxType Type
 
